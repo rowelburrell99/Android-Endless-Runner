@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/backg"
+    >
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score : 0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingVertical="14dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        />
+
+    <FrameLayout
+        android:id="@+id/gameFrame"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_gravity="center_horizontal">
+
+        <ImageView
+            android:id="@+id/sprite"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/char_right"
+            android:layout_gravity="bottom"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/spike"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/spike"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/coin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/coin"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/heart"
+            android:visibility="invisible"/>
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coin Collector"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/highScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="High Score : 300"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="80dp"/>
+
+            <!-- style/Textappearance is an inheritance -->
+            <Button
+                style="@style/myStyle1.myStyle2"
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Easy"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginTop="60dp"
+                android:onClick="easyGame"/>
+
+            <Button
+                style="@style/myStyle1.myStyle2"
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginTop="15dp"
+                android:onClick="medGame"/>
+
+            <Button
+                style="@style/myStyle1.myStyle3"
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hard"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginTop="15dp"
+                android:onClick="hardGame"/>
+
+            <Button
+                style="@style/myStyle1.myStyle4"
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_marginTop="15dp"
+                android:onClick="exitGame"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>
